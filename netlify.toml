@@ -10,26 +10,3 @@ command = "npm run deploy"
 
 [Settings]
 ID = "hugo-comments"
-
-[[headers]]
-  for = "/*" # This defines which paths this specific [[headers]] block will cover.
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    Cache-Control = "public, max-age=31536000"
-    X-Content-Type-Options = "nosniff"
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"
-    Content-Type = "application/javascript"
-[[headers]]
-  for = "/*.css"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"
-    Content-Type = "text/css"
-[[headers]]
-  for = "/*.png"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"
-    Content-Type = "image/png"
