@@ -1,0 +1,8 @@
+{{ define "main" }}
+    {{ $home := .Site.GetPage "/home" }}
+    <div class="self-center mb-12">
+        {{ $home.Content }}
+    </div>
+    {{ partial "comment-form.html" . }}
+    {{ partial "comment-list.html" . }}
+{{ end }}

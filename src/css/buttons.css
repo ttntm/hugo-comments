@@ -1,0 +1,99 @@
+.btn {
+    background: none;
+    border: 1px solid transparent;
+    color: transparent;
+    border-radius: 0 !important;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    transition: all 0.75s ease;
+    position: relative;
+}
+
+.btn:hover {
+    transition: all 0.75s ease;
+}
+
+.btn-primary::before {
+    transition: 0.75s all ease;
+    position:absolute;
+    top:0;
+    left:50%;
+    right:50%;
+    bottom:0;
+    opacity:0;
+    content:'';
+    background-color: #849995;
+    z-index:-2;
+}
+
+.btn-primary {
+    border: 1px solid #849995 !important;
+    color: #849995;
+}
+
+.btn-primary:hover::before {
+      transition:0.75s all ease;
+      left:0;
+      right:0;
+      opacity:1;
+}
+
+.btn-primary:hover {
+    color: #fff;
+}
+
+/* Draw Border Btn*/
+
+.draw-border {
+    box-shadow: inset 0 0 0 2px #bbcdc9;
+    /*color: #bbcdc9;*/
+    transition: color 0.25s 0.0833333333s;
+    position: relative;
+}
+
+.draw-border::before, .draw-border::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.draw-border::before {
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+}
+
+.draw-border::after {
+    border-top-width: 2px;
+    border-right-width: 2px;
+}
+
+/*.draw-border:hover {
+    color: #849995;
+}*/
+
+.draw-border:hover::before, .draw-border:hover::after {
+    border-color: #849995;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+}
+
+.draw-border:hover::before {
+    transition-delay: 0s, 0s, 0.25s;
+}
+
+.draw-border:hover::after {
+    transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn-zoom {transform: scale(1.0);}
+.btn-zoom:hover {transform: scale(1.1); letter-spacing: 0.1rem;}

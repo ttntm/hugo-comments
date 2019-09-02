@@ -1,0 +1,12 @@
+# SETUP
+baseurl = "/"
+publishdir = "public"
+DefaultContentLanguage = "en"
+canonifyUrls = "true"
+googleAnalytics = ""
+disableKinds = ["RSS","taxonomy","taxonomyTerm","sitemap"] #remove this when blog goes live
+summaryLength = 40
+
+[params]
+    year = "2019"
+    author = "ttntm"

@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Nunito:300,400&display=swap');
+
+@font-face	{
+    font-family: 'Shallou Regular';
+    src: url('/font/ShallouRegular.woff2');
+    font-display: swap;
+}
+
+@tailwind base;
+
+@tailwind components;
+
+@import "normalize.css";
+@import "buttons.css";
+@import "post.css";
+
+@tailwind utilities;
+
+:hover {
+    transition: all 350ms ease;
+}
+
+:focus,
+button:focus {
+    outline-color: #212121;
+    outline-style: dotted;
+    outline-width: 1px;
+    transition: none;
+}
+
+@media (min-width: 576px) {
+    .bod-pt-scroll {
+        padding-top: 50px;
+    }
+    .nav-sticky {
+        position: fixed;
+        min-width: 100%;
+        max-height: 50px;
+        top: 0;
+        background-color: #fff!important;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+        transition: all .25s ease-in;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Amatic SC', serif;
+    color: #849995;
+    font-weight: normal;
+    text-transform: uppercase;
+    word-spacing: 0.25rem;
+}
+
+h1, .h1 {font-size: 2.5rem;}
+h2, .h2 {font-size: 2.1875rem;}
+h3, .h3 {font-size: 1.875rem;}
+h4, .h4 {font-size: 1.5625rem;}
+h5, .h5 {font-size: 1.25rem;}
+h6, .h6 {font-size: 1rem;}
+
+.font-sans {
+    font-family: 'Nunito', sans-serif;
+}
+
+.font-heading {
+    font-family: 'Amatic SC', cursive!important;
+}
+
+.font-script {
+    font-family: 'Shallou Regular', cursive;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 20px;
+    max-width: 100px;
+    max-height: 0px;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,.15));
+}
+
+.back-to-top:hover, .social-icon:hover {
+    transform: rotate(1080deg);
+}
+
+.btt-active {
+    max-height: 128.5px;
+}
+
+@media (max-width: 1023px) {
+    .back-to-top {
+        max-width: 65px;
+        right: 15px;
+        bottom: 40px;
+    }
+}
+
+.bg-grey-half {
+    background: linear-gradient(#fff 50%,#f7f7f7 50%);
+}
+
+/* NAV-MENU */
+
+.nav-link-active {
+    color: #052d49!important;
+    font-weight: normal;
+}
+
+@media(max-width:767px) {
+
+    .nav-link-active {
+        font-weight: normal;
+    }
+
+    .navicon {
+        width: 100%;
+        background: transparent;
+        position: relative;
+        height: 20px;
+        width: 30px;
+        display: block;
+        z-index: 99;
+        transition: linear 0.5s all;
+    }
+
+    .navicon:focus {
+        outline: none;
+    }
+
+    .navicon::before,
+    .navicon::after {
+        background: #849995;
+        backface-visibility: hidden;
+        content: "";
+        height: 1px;
+        left: 0;
+        transition: 0.8s ease;
+        width: 30px;
+    }
+
+    .navicon::before {
+        box-shadow: #849995 0 10px 0 0;
+        position: absolute;
+        top: 0;
+    }
+
+    .navicon::after {
+        position: absolute;
+        top: 20px;
+    }
+
+    .navicon-active {
+        transition: linear 0.5s all;
+    }
+
+    .navicon-active::before {
+        box-shadow: transparent 0 0 0 0;
+        top: 10px;
+        transform: rotate(225deg);
+    }
+
+    .navicon-active::after {
+        top: 10px;
+        transform: rotate(315deg);
+    }
+
+    .toggle {
+        position: absolute;
+        top:-200%;
+        display: flex;
+        background-color: rgba(0, 0, 0, .075);
+        opacity: 0;
+        max-height: 0;
+        transition: ease-in 0.5s all;
+        transform: translateY(-200%);
+    }
+
+    .toggle-active {
+        position: relative;
+        top: 0;
+        opacity: 1;
+        max-height: 100vh;
+        transition: ease-in 0.5s all;
+        transform: translateY(0);
+    }
+}
+
+/* CHECKBOXES */
+
+/* Customize the label (the cb-container) */
+.cb-container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.cb-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border: 1px solid #b8cdc9;
+}
+
+/* When the checkbox is checked, add a background */
+.cb-container input:checked~.checkmark {
+    background-color: #b8cdc9;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.cb-container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.cb-container .checkmark:after {
+    left: 6px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* IMAGE OVERLAY */
+
+.img-container {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    padding: 1rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.overlay .link-overlay {
+    opacity: 0;
+    box-shadow: inset 0 0 0 1px #f7f7f7;
+    position: relative;
+    /* transition: all 1.5s ease; */
+}
+
+.overlay:hover, .overlay:hover .link-overlay {
+    opacity: 1;
+    /* transition: all 1s ease; */
+}
+
+.link-overlay::before, .link-overlay::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.link-overlay::before {
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+}
+
+.link-overlay::after {
+    border-top-width: 1px;
+    border-right-width: 1px;
+}
+
+.link-overlay:hover::before, .link-overlay:hover::after {
+    border-color: #849995;
+    transition: border-color 0s, width 0.35s, height 0.35s;
+    width: 100%;
+    height: 100%;
+}
+
+.link-overlay:hover::before {
+    transition-delay: 0s, 0s, 0.35s;
+}
+
+.link-overlay:hover::after {
+    transition-delay: 0s, 0.35s, 0s;
+}
+
+/* GRID STYLES */
+
+.grid {
+    display: grid;
+    grid-gap: 30px;
+}
+
+@media(max-width:767px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(min-width:768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
