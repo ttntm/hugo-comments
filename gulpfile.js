@@ -78,6 +78,6 @@ gulp.task('watchcss', function() {
   gulp.watch('./src/css/*.css', gulp.series('procss'));
 });
 
-gulp.task('dev', gulp.series('procss'));
+gulp.task('dev', gulp.series('procss','get-comments'));
 
 gulp.task('build', gulp.series('procss','get-comments'));

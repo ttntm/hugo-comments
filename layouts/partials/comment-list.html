@@ -1,10 +1,10 @@
 <section id="comment-list" class="w-full bg-grey-light my-12">
-    <div class="w-full px-4 lg:px-0 mx-auto">
+    <div class="w-full md:w-5/6 lg:w-3/4 xl:w-3/4 px-4 lg:px-0 pb-4 mx-auto">
         <h3 class="text-teal-dark text-center -mt-6">Comments</h3>
         {{ range $comments := .Site.Data.comments }}
             {{ range . }}
-                <div class="w-full md:w-1/2 flex flex-col font-light border-b border-solid border-teal-dark my-8 mx-auto">
-                    <span class="block">Posted at: {{ .date | dateFormat "Mon, 02 Jan. 2006, 15:04" }}</span>
+                <div class="w-full flex flex-col font-light border-b border-solid border-teal-dark my-8 mx-auto">
+                    <span class="block">Posted at: {{ .date | dateFormat "Mon, 02 Jan. 2006, 15:04 MST" }}</span>
                     <span class="block">By: {{ .name }}</span>
                     <p class="">Comment:<br>{{ .comment }}</p>
                 </div>

@@ -1,6 +1,16 @@
 {
   "null": [
     {
+      "name": "Freak Azoid",
+      "comment": "This comment was created afterr setting up the auto-deploy zap. It should appear within an hour.",
+      "date": "2019-09-02T09:42:25.163Z"
+    },
+    {
+      "name": "Bert Rahm",
+      "comment": "Let's see what happens to the second comment. Already curious...",
+      "date": "2019-09-02T09:14:58.105Z"
+    },
+    {
       "name": "Sepp Schnorcher",
       "comment": "This is a test comment to see if this works. Wish me luck.",
       "date": "2019-09-02T08:38:38.537Z"

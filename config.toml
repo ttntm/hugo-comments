@@ -1,5 +1,5 @@
 # SETUP
-baseurl = "/"
+baseurl = "https://hugo-comments.netlify.com/"
 publishdir = "public"
 DefaultContentLanguage = "en"
 canonifyUrls = "true"
