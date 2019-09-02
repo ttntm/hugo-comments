@@ -2,7 +2,7 @@
 baseurl = "https://hugo-comments.netlify.com/"
 publishdir = "public"
 DefaultContentLanguage = "en"
-canonifyUrls = "true"
+#canonifyUrls = "true"
 googleAnalytics = ""
 disableKinds = ["RSS","taxonomy","taxonomyTerm","sitemap"] #remove this when blog goes live
 summaryLength = 40
