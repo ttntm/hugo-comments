@@ -1,15 +1,15 @@
 [build]
 publish = "public"
-command = "hugo --minify"
+command = "npm run deploy"
 
 [context.production.environment]
 HUGO_VERSION = "0.55.6"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "false"
-command = "hugo --minify"
+command = "npm run deploy"
 
 [Settings]
-ID = "sahar.design"
+ID = "hugo-comments"
 
 [[headers]]
   for = "/*" # This defines which paths this specific [[headers]] block will cover.

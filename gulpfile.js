@@ -10,14 +10,15 @@ var gulp = require('gulp'),
 var buildSrc = "./";
 var buildDest = "public";
 
-gulp.task("get:comments", function (done) {
+gulp.task("get-comments", function (done) {
 
   // set up our request with appropriate auth token and Form ID
-  var url = 'https://api.netlify.com/api/v1/forms/${process.env.APPROVED_COMMENTS_FORM_ID}/submissions/?access_token=${process.env.API_AUTH}';
+  var url = 'https://api.netlify.com/api/v1/forms/${process.env.COMMENT_FORM_ID}/submissions/?access_token=${process.env.API_AUTH}';
 
   // Go and get the data from Netlify's submissions API
   request(url, function(err, response, body){
     if(!err && response.statusCode === 200){
+      console.log("Submissions found");
       var body = JSON.parse(body);
       var comments = {};
 
@@ -27,9 +28,9 @@ gulp.task("get:comments", function (done) {
         var data = body[item].data;
 
         var comment = {
-          name: data.name,
-          avatar: gravatar.url(data.email, {s: '100', r: 'x', d: 'retro'}, true),
-          comment: "\n" + data.comment.trim(), // add a newline before the markdown so that 11ty can spot the markdown and interpret it.
+          name: data.Name,
+          // avatar: gravatar.url(data.email, {s: '100', r: 'x', d: 'retro'}, true),
+          comment: data.Comment,
           date: body[item].created_at
         };
 
@@ -79,4 +80,4 @@ gulp.task('watchcss', function() {
 
 gulp.task('dev', gulp.series('procss'));
 
-gulp.task('build', gulp.series('procss'));
+gulp.task('build', gulp.series('procss','get-comments'));
