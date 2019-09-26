@@ -3,7 +3,7 @@
         <h3 class="text-teal-dark text-center -mt-6">Leave a comment</h3>
         <p class="text-center text-teal-dark text-sm mb-4">Your email address will not be published, required fields are marked with &ast;.</p>
         <form name="Comments" class="w-full flex flex-col mb-8" action="/comment-thanks" method="POST" netlify-honeypot="bot-field" netlify>
-            <input name="path" type="hidden" value="{{ .RelPermalink }}" disabled>
+            <input name="path" type="hidden" value="{{ .RelPermalink }}">
             <input name="bot-field" class="hidden">
             <textarea class="border border-solid border-teal bg-grey-light p-2 mb-4" name="Comment" rows="6" placeholder="Comment&ast;" style="resize:none;" required></textarea>
             <div class="flex flex-col md:flex-row justify-between items-center">
