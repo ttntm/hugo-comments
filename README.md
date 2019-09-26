@@ -13,3 +13,7 @@ During the build process, the comments are obtained from Netlify Forms via their
 ## Demo
 
 https://hugo-comments.netlify.com/
+
+## Status
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6a5bdcb6-71ef-444b-93fc-afcc2fea774c/deploy-status)](https://app.netlify.com/sites/hugo-comments/deploys)
