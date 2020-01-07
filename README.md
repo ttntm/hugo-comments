@@ -2,6 +2,8 @@
 
 Source: https://css-tricks.com/jamstack-comments/
 
+V2 of this can be found explained in detail here: https://ttntm.me/blog/static-blog-comments-hugo/
+
 ## Description
 
 This site is built around the linked tutorial above but it doesn't make use of the Slack notifications/Netlify functions in order to keep things simply.
