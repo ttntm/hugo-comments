@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     concatCss = require('gulp-concat-css'),
     cssnano = require('gulp-cssnano'),
     concat = require('gulp-concat'),
+    purgecss = require('gulp-purgecss'),
     request = require('request'),
     fs = require('fs'),
     config = require('dotenv').config();
@@ -66,6 +67,12 @@ gulp.task('procss', function () {
         require('tailwindcss'),
         require('autoprefixer'),
       ]))
+      .pipe(purgecss({
+        content: ['./layouts/**/*.html','./content/**/*.md'],
+        defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+        whitelist: [':focus', 'button', 'button:focus'],
+        whitelistPatterns: [/(:\w+)/g]
+      }))
       .pipe(concatCss('page.css'))
       .pipe(cssnano({
         reduceIdents: false,

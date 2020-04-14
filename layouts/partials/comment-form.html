@@ -1,17 +1,17 @@
-<section id="post-comment" class="w-full bg-grey-light my-12">
+<section id="post-comment" class="w-full border border-dark rounded-sm pt-8 mb-12 shadow">
     <div class="w-full md:w-5/6 lg:w-3/4 xl:w-3/4 px-4 lg:px-0 mx-auto">
-        <h3 class="text-teal-dark text-center -mt-6">Leave a comment</h3>
-        <p class="text-center text-teal-dark text-sm mb-4">Your email address will not be published, required fields are marked with &ast;.</p>
+        <h3 class="text-dark text-center">Leave a comment</h3>
+        <p class="text-center text-dark text-sm mb-4">Your email address will not be published, required fields are marked with &ast;.</p>
         <form name="Comments" class="w-full flex flex-col mb-8" action="/comment-thanks" method="POST" netlify-honeypot="bot-field" netlify>
             <input name="path" type="hidden" value="{{ .RelPermalink }}">
             <input name="bot-field" class="hidden">
-            <textarea class="border border-solid border-teal bg-grey-light p-2 mb-4" name="Comment" rows="6" placeholder="Comment&ast;" style="resize:none;" required></textarea>
+            <textarea class="rounded p-2 mb-4" name="Comment" rows="6" placeholder="Comment&ast;" style="resize:none;" required></textarea>
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <input class="w-full md:w-1/3 p-2 m-0 mb-4 md:mr-3 border border-solid border-teal bg-grey-light" type="text" name="Name" placeholder="Name&ast;" required>
-                <input class="w-full md:w-1/3 p-2 m-0 mb-4 md:mx-3 border border-solid border-teal bg-grey-light" type="email" name="Email" placeholder="E-Mail Address&ast;" required>
-                <input class="w-full md:w-1/3 p-2 m-0 mb-4 md:ml-3 border border-solid border-teal bg-grey-light" type="text" name="Website" placeholder="Website">
+                <input class="w-full md:w-1/3 p-2 m-0 mb-4 md:mr-3 rounded" type="text" name="Name" placeholder="Name&ast;" required>
+                <input class="w-full md:w-1/3 p-2 m-0 mb-4 md:mx-3 rounded" type="email" name="Email" placeholder="E-Mail Address&ast;" required>
+                <input class="w-full md:w-1/3 p-2 m-0 mb-4 md:ml-3 rounded" type="text" name="Website" placeholder="Website">
             </div>
-            <button type="submit" class="btn-zoom font-heading text-navy text-3xl uppercase hover:opacity-75 mx-auto">Submit comment!</button>
+            <button type="submit" class="btn-zoom rounded-full hover:text-red border border-dark font-bold hover:bg-dark hover:shadow px-6 py-2 mt-4 mx-auto">Submit comment!</button>
         </form>
     </div>
 </section>

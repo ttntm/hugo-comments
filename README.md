@@ -2,7 +2,9 @@
 
 Detailed description: https://ttntm.me/blog/static-blog-comments-hugo/
 
-Based on: https://css-tricks.com/jamstack-comments/
+## Demo
+
+https://hugo-comments.netlify.app/
 
 ## Description
 
@@ -10,9 +12,7 @@ The comments posted are handled by [Netlify Forms](https://www.netlify.com/docs/
 
 During the build process, the comments are obtained from Netlify Forms via their API and put into a `comments.json` file by Gulp. In order to make this work on `localhost` environments, don't forget that you'll need an `.env` file within the project directory that stores the necessary `Form ID` and `API Token` for your own Netlify setup.
 
-## Demo
-
-https://hugo-comments.netlify.com/
+Based on: https://css-tricks.com/jamstack-comments/
 
 ## Status
 

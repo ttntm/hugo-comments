@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Nunito:300,400&display=swap');
-
 @tailwind base;
 
 @tailwind components;
@@ -14,8 +12,8 @@
 
 :focus,
 button:focus {
-    outline-color: #212121;
-    outline-style: dotted;
+    outline-color: #4C566A;
+    outline-style: dashed;
     outline-width: 1px;
     transition: none;
 }
@@ -26,24 +24,13 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Amatic SC', serif;
-    color: #849995;
-    font-weight: normal;
-    text-transform: uppercase;
-    word-spacing: 0.25rem;
+    color: #4C566A;
+    font-weight: bold;
 }
 
-h1, .h1 {font-size: 2.5rem;}
-h2, .h2 {font-size: 2.1875rem;}
-h3, .h3 {font-size: 1.875rem;}
-h4, .h4 {font-size: 1.5625rem;}
-h5, .h5 {font-size: 1.25rem;}
+h1, .h1 {font-size: 2rem;}
+h2, .h2 {font-size: 1.75rem;}
+h3, .h3 {font-size: 1.5rem;}
+h4, .h4 {font-size: 1.25em;}
+h5, .h5 {font-size: 1.15rem;}
 h6, .h6 {font-size: 1rem;}
-
-.font-sans {
-    font-family: 'Nunito', sans-serif;
-}
-
-.font-heading {
-    font-family: 'Amatic SC', cursive!important;
-}
