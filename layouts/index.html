@@ -1,6 +1,6 @@
 {{ define "main" }}
     {{ $home := .Site.GetPage "/home" }}
-    <div class="self-center px-4 lg:px-0 my-12">
+    <div class="self-center my-12">
         {{ $home.Content }}
     </div>
     {{ partial "comment-form.html" . }}
