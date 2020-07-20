@@ -1,0 +1,3 @@
+# Redirect default Netlify subdomain to primary domain
+https://hugo-comments.netlify.app/* https://comments.ttntm.me/:splat 301!
+https://master--hugo-comments.netlify.app/* https://comments.ttntm.me/:splat 301!
