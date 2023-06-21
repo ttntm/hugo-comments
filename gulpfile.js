@@ -70,7 +70,7 @@ gulp.task('procss', function () {
       .pipe(purgecss({
         content: ['./layouts/**/*.html','./content/**/*.md'],
         defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
-        whitelist: [':focus', 'button', 'button:focus'],
+        whitelist: [':focus', 'button', 'button:focus', 'p img'],
         whitelistPatterns: [/(:\w+)/g]
       }))
       .pipe(concatCss('page.css'))
