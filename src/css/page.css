@@ -34,3 +34,9 @@ h3, .h3 {font-size: 1.5rem;}
 h4, .h4 {font-size: 1.25em;}
 h5, .h5 {font-size: 1.15rem;}
 h6, .h6 {font-size: 1rem;}
+
+p img {
+	max-width: 100%;
+	width: 100%;
+	display: block;
+}
