@@ -9,6 +9,8 @@ Detailed description: https://ttntm.me/blog/static-blog-comments-hugo/
 
 GitHub: https://github.com/ttntm/hugo-comments
 
+**2023/09 -- Thanks to an increasing amount of bot submissions, automatic deployments have been disabled. Submission work, but your comment will not show up on this site unless I trigger a manual deployment.**
+
 ## Description
 
 The comments posted are handled by [Netlify Forms](https://www.netlify.com/docs/form-handling/) and get processed there according to this flowchart: [ttntm.me/img/blog/comment-flow.jpg](https://ttntm.me/img/blog/comment-flow.jpg)
