@@ -9,7 +9,7 @@ Detailed description: https://ttntm.me/blog/static-blog-comments-hugo/
 
 GitHub: https://github.com/ttntm/hugo-comments
 
-**2023/09 -- Thanks to an increasing amount of bot submissions, automatic deployments have been disabled. Submission work, but your comment will not show up on this site unless I trigger a manual deployment.**
+**2023-09 -- Thanks to an increasing amount of bot submissions, automatic deployments have been disabled. Submission work, but your comment will not show up on this site unless I trigger a manual deployment.**
 
 ## Description
 
